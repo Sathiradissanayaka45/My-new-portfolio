@@ -8,6 +8,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Services from './components/Services'; // Import the new Services component
 import './index.css';
+import Articles from './components/Articles';
+import Footer from './components/Footer';
 
 function App() {
   const scrollTo = (section) => {
@@ -36,9 +38,13 @@ function App() {
       <Element name="projects">
         <Projects />
       </Element>
+      <Element name="articles">
+        <Articles />
+      </Element>
       <Element name="contact">
         <Contact />
       </Element>
+      <Footer onScrollTo={scrollTo} />
     </div>
   );
 }

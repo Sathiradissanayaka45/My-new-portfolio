@@ -40,6 +40,7 @@ const Header = ({ onScrollTo }) => (
           <StyledButton color="inherit" onClick={() => onScrollTo('skills')}>Skills</StyledButton>
           <StyledButton color="inherit" onClick={() => onScrollTo('services')}>My Services</StyledButton>
           <StyledButton color="inherit" onClick={() => onScrollTo('projects')}>Projects</StyledButton>
+          <StyledButton color="inherit" onClick={() => onScrollTo('articles')}>Articles</StyledButton>
           <StyledButton color="inherit" onClick={() => onScrollTo('contact')}>Contact</StyledButton>
         </div>
       </Container>
