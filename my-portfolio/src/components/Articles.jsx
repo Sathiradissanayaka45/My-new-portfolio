@@ -1,5 +1,27 @@
 import React, { useState } from "react";
 import { Grid, Card, CardMedia, CardContent, Button, Typography, Pagination, Box } from "@mui/material";
+import { styled } from '@mui/material/styles';
+
+// Custom Card component with white border and hover effect
+const CustomCard = styled(Card)(({ theme }) => ({
+  border: `2px solid ${theme.palette.common.white}`, // White border for contrast
+  borderRadius: '12px',
+  boxShadow: theme.shadows[5], // Slight shadow for a subtle lift effect
+  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  '&:hover': {
+    transform: 'scale(1.05)',
+    boxShadow: theme.shadows[10], // Enhance shadow on hover
+  },
+}));
+
+// Custom Button with primary color
+const CustomButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.common.white,
+  '&:hover': {
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
 
 const allArticles = [
   {
@@ -30,30 +52,33 @@ const Articles = () => {
   const currentArticles = allArticles.slice(indexOfFirstArticle, indexOfLastArticle);
 
   return (
-    <Box sx={{ padding: 4 }}>
+    <Box sx={{ padding: 4, backgroundColor: '#121212', color: '#fff' }}>
+      <Typography variant="h4" component="h2" gutterBottom align="center">
+        Articles
+      </Typography>
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         {currentArticles.map((article) => (
           <Grid item xs={12} sm={6} md={4} key={article.id}>
-            <Card>
+            <CustomCard>
               <CardMedia
                 component="img"
-                height="140"
+                height="200"
                 image={article.imageUrl}
                 alt={article.title}
+                sx={{ objectFit: 'cover' }}
               />
               <CardContent>
-                <Typography variant="h6" component="div">
+                <Typography variant="h6" component="div" gutterBottom>
                   {article.title}
                 </Typography>
-                <Button
+                <CustomButton
                   variant="contained"
-                  color="primary"
                   onClick={() => window.open(article.link, "_blank")}
                 >
                   View Article
-                </Button>
+                </CustomButton>
               </CardContent>
-            </Card>
+            </CustomCard>
           </Grid>
         ))}
       </Grid>

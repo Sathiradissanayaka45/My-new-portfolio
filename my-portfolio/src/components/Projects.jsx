@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 import { Box, Card, CardContent, CardMedia, Typography, Button, Pagination } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
+// Custom Card component with border and shadow
+const CustomCard = styled(Card)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  border: `2px solid ${theme.palette.common.white}`, // White border for contrast
+  borderRadius: '12px',
+  boxShadow: theme.shadows[5], // Slight shadow for a subtle lift effect
+  backgroundColor: theme.palette.background.paper,
+  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  '&:hover': {
+    transform: 'scale(1.02)',
+    boxShadow: theme.shadows[10], // Enhance shadow on hover
+  },
+}));
 
 const allProjects = [
   {
@@ -54,22 +70,24 @@ const Projects = () => {
   const currentProjects = allProjects.slice(indexOfFirstProject, indexOfLastProject);
 
   return (
-    <Box sx={{ padding: 4 }}>
+    <Box sx={{ padding: 4, backgroundColor: '#121212', color: '#fff' }}>
       <Typography variant="h3" gutterBottom align="center">
         Projects
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         {currentProjects.map((project, index) => (
-          <Card key={index} sx={{ display: 'flex', flexDirection: 'row', boxShadow: 3, backgroundColor: 'background.paper' }}>
+          <CustomCard key={index}>
             <CardMedia
               component="img"
-              sx={{ width: 200, height: 150 }}
+              sx={{ width: 200, height: 150, objectFit: 'cover' }}
               image={project.image}
               alt={project.title}
             />
             <CardContent sx={{ flex: 1 }}>
               <Typography variant="h6" color="textPrimary">{project.title}</Typography>
-              <Typography variant="body1" color="textSecondary" sx={{ marginBottom: 2 }}>{project.description}</Typography>
+              <Typography variant="body1" color="textSecondary" sx={{ marginBottom: 2 }}>
+                {project.description}
+              </Typography>
               <Button
                 variant="contained"
                 color="primary"
@@ -80,7 +98,7 @@ const Projects = () => {
                 View Code
               </Button>
             </CardContent>
-          </Card>
+          </CustomCard>
         ))}
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 4 }}>
