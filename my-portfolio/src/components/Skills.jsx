@@ -128,7 +128,7 @@ const Skills = () => {
                           <Code />
                         </ListItemIcon>
                         <Typography>
-                          <strong>Programming Languages:</strong> Java, C, C++, HTML, CSS, JavaScript
+                          <strong>Programming Languages:</strong> Java, C, C++, HTML, CSS, JavaScript, Flutter, Kotlin
                         </Typography>
                       </ListItem>
                       <ListItem>

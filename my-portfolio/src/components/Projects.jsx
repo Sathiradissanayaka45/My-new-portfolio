@@ -21,40 +21,52 @@ const allProjects = [
   {
     title: "Study Storm",
     description: "This is a university group project under the Distributed System module, built using microservice architecture. My part is learner service and feedback and rating service.",
-    image: "/assets/DP00141.jpg",
+    image: "/assets/DS.PNG",
     github: "https://github.com/SLIITStudyStorm"
-  },
-  {
-    title: "Vehicle Spare Parts Management System",
-    description: "This is a private project developed using Java and JSP for skill development.",
-    image: "/assets/path_to_vehicle_spare_parts_image.jpg",
-    github: "https://github.com/Sathiradissanayaka45/vehicle_spare_part_system"
   },
   {
     title: "Website using NASA API’s",
     description: "A university project under the Application Framework module using MERN Stack. Hosted the backend using Render and frontend using Firebase.",
-    image: "/assets/path_to_nasa_api_image.jpg",
+    image: "/assets/nasa.PNG",
     github: "https://github.com/Sathiradissanayaka45/Nasa-api"
+  },
+  {
+    title: "Vehicle Spare Parts Managment System ",
+    description: "A group project using MERN Stack for full process of a shop.",
+    image: "/assets/spare shop.png",
+    github: "https://github.com/Sathiradissanayaka45/Chathura_motors"
   },
   {
     title: "University Time Table Management System",
     description: "An individual project using Express.js and Node.js to manage university timetables and student enrollments.",
-    image: "/assets/path_to_university_timetable_image.jpg",
-    github: "https://github.com/Sathiradissanayaka45/University_Time_Table_Managment_System.git"
+    image: "/assets/node.png",
+    github: "https://github.com/Sathiradissanayaka45/University_Time_Table_Managment_System"
+  },
+  {
+    title: "Vehicle Spare Parts Management System",
+    description: "This is a individual project developed using Java and JSP for skill development.",
+    image: "/assets/vehicle.PNG",
+    github: "https://github.com/Sathiradissanayaka45/vehicle_spare_part_system"
   },
   {
     title: "Tour Guide Management System",
     description: "A university group project using Java and JSP for managing tour guides.",
-    image: "/assets/DP00141.jpg",
+    image: "/assets/tour.PNG",
     github: "https://github.com/Sathiradissanayaka45/tour-guide_system"
   },
   {
     title: "Online Shopping Cart Application",
     description: "A group project using OSGi Framework for buying items from a shop.",
-    image: "/assets/path_to_shopping_cart_image.jpg",
+    image: "/assets/osgii.png",
     github: "https://github.com/Sathiradissanayaka45/Shopping_Cart-OSGi.git"
-  }
-  // Add other projects here...
+  },
+
+  {
+    title: "Computer spare part managment System",
+    description: "This is a individual project developed using Java and JSP for skill development.",
+    image: "/assets/computer.jpg",
+    github: "https://github.com/Sathiradissanayaka45/computer_spare_parts"
+  },
 ];
 
 const Projects = () => {

@@ -26,17 +26,22 @@ const CustomButton = styled(Button)(({ theme }) => ({
 const allArticles = [
   {
     id: 1,
-    title: "Article Title 1",
-    imageUrl: "../assets/mongo.png",
-    link: "link_to_article1"
+    title: "Mastering Object-Oriented Programming (OOP) in Java: A Visual Deep Dive",
+    imageUrl: "../assets/oop.jpg",
+    link: "https://medium.com/@sathiradissanayaka45/java-oop-unveiled-elevating-code-craftsmanship-with-elegance-8005ff5e4f55"
   },
   {
     id: 2,
-    title: "Article Title 2",
-    imageUrl: "../assets/DP00141.jpg",
-    link: "link_to_article2"
+    title: "Navigating Database Realms: A Deep Dive into MySQL and MongoDB Examples",
+    imageUrl: "../assets/mongo.png",
+    link: "https://medium.com/@sathiradissanayaka45/navigating-database-realms-a-deep-dive-into-mysql-and-mongodb-examples-255f1ea694a1"
   },
-  // Add more articles as needed
+  {
+    id: 2,
+    title: "Delivering Efficiency: A Tale of Revolutionizing Motorcycle Spare Part Management",
+    imageUrl: "../assets/itp.jpg",
+    link: "https://medium.com/@sathiradissanayaka45/delivering-efficiency-a-tale-of-revolutionizing-motorcycle-spare-part-management-eb9d83c241d9"
+  },
 ];
 
 const Articles = () => {
